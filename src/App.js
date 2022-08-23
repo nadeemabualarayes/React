@@ -69,7 +69,7 @@ function App() {
 
       <br></br>
       <h6>First Number</h6>
-      <input value={num1} onChange={(e) => {
+      <input type ="number" value={num1} onChange={(e) => {
         console.log(e.target.value);
         setNum1(e.target.value)
       }}>
@@ -81,7 +81,7 @@ function App() {
 
 
       <h6>Second Number</h6>
-      <input value={num2} onChange={(e) => {
+      <input type="number"  value={num2} onChange={(e) => {
         console.log(e.target.value);
         setNum2(e.target.value)
       }}>
