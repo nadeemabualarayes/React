@@ -35,7 +35,7 @@ function App() {
   const address = useState('Ramallah - Palestine');
   const [list, setList] = useState(['Red', 'Yallow', 'Green'])
 
-
+//
   return (
     <div>
       <h1>My Name is : {firstName}</h1> 
