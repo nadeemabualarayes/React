@@ -35,8 +35,15 @@ function App() {
   const address = useState('Ramallah - Palestine');
   const [list, setList] = useState(['Red', 'Yallow', 'Green'])
 
-  useEffect(() => { document.title = `My Name is ${firstName}` });
+  const [num1, setNum1] = useState(7);
+  const [num2, setNum2] = useState(8);
+  const [sum, setsum] = useState(0);
 
+  useEffect(() => { document.title = `My Name is ${firstName}` });
+  useEffect(() => {
+    // Update the document title using the browser API
+    document.title = `sum = ${num1+num2} `;
+  });
 
   //
   return (
@@ -59,6 +66,12 @@ function App() {
         setFirstName(e.target.value)
       }}>
 </input>
+
+
+      <p>sum = {sum} </p> 
+      <button onClick={() => setsum(num1 + num2)}>
+        Click me
+      </button>
 
 
     </div>
