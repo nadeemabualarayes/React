@@ -35,14 +35,14 @@ function App() {
   const address = useState('Ramallah - Palestine');
   const [list, setList] = useState(['Red', 'Yallow', 'Green'])
 
-  const [num1, setNum1] = useState(7);
-  const [num2, setNum2] = useState(8);
+  const [num1, setNum1] = useState(0);
+  const [num2, setNum2] = useState(0);
   const [sum, setsum] = useState(0);
 
   useEffect(() => { document.title = `My Name is ${firstName}` });
   useEffect(() => {
     // Update the document title using the browser API
-    document.title = `sum = ${num1+num2} `;
+    document.title = `sum = ${sum} `;
   });
 
   //
@@ -60,18 +60,36 @@ function App() {
           )
         })}
       </ul>
-
+      <h1>to change first name</h1>
       <input value={firstName} onChange={(e) => {
         console.log(e.target.value);
         setFirstName(e.target.value)
       }}>
-</input>
+      </input>
 
-
-      <p>sum = {sum} </p> 
-      <button onClick={() => setsum(num1 + num2)}>
-        Click me
+      <br></br>
+      <h6>First Number</h6>
+      <input value={num1} onChange={(e) => {
+        console.log(e.target.value);
+        setNum1(e.target.value)
+      }}>
+      </input>
+      <br></br>
+      <button onClick={() => setsum(parseInt(num1) + parseInt(num2))}>
+        plus
       </button>
+
+
+      <h6>Second Number</h6>
+      <input value={num2} onChange={(e) => {
+        console.log(e.target.value);
+        setNum2(e.target.value)
+      }}>
+      </input>
+
+
+      <p>sum = {sum} </p>
+     
 
 
     </div>
