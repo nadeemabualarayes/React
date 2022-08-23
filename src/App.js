@@ -39,11 +39,17 @@ function App() {
   const [num2, setNum2] = useState(0);
   const [sum, setsum] = useState(0);
 
+  const  [count, setCount] = useState(0);
+
+  
   useEffect(() => { document.title = `My Name is ${firstName}` });
   useEffect(() => {
     // Update the document title using the browser API
     document.title = `sum = ${sum} `;
   });
+
+
+
 
   //
   return (
