@@ -26,7 +26,7 @@ export default App;
  */
 
 
-import React, { useEffect, useState } from 'react';
+/* import React, { useEffect, useState } from 'react';
 
 
 function App() {
@@ -39,7 +39,17 @@ function App() {
   const [num2, setNum2] = useState(0);
   const [sum, setsum] = useState(0);
 
-  const  [count, setCount] = useState(0);
+
+
+
+  const [IdNumber, setIdNumber] = useState("12121212121");
+
+  useEffect(() => {
+    setIdNumber(props.IdNumber);
+    console.log(props.IdNumber);
+  }, [props.IdNumber]);
+
+
 
   //sdfsf
   useEffect(() => { document.title = `My Name is ${firstName}` });
@@ -98,8 +108,61 @@ function App() {
      
 
 
+
+      <h6>Id Number</h6>
+      <input id="IdNumber" value={IdNumber} onInput={(e) => setIdNumber(e.target.value)}></input>
+
+
+
+
     </div>
   );
 }
 
 export default App;
+ */
+
+
+
+import React, { useEffect, useState } from 'react';
+
+const App = () => {
+  cosnt[birthDate, setBirthDate] = useState("12.10")
+  cosnt[IDNumber, setIDNumber] = useState("121212121212")
+
+  cosnt[firstNumber, setfirstNumber] = useState(0)
+  cosnt[secondNumber, setsecondNumber] = useState(0)
+
+
+  return <div>
+    <label for="birth-data"> birth date</label>
+    <input id="birth-data" value={birthDate} onInput={(e) => setBirthDate(e.target.value)}></input>
+    <br></br>
+
+
+    <label for="IdNumber"> birth date</label>
+    <input id="IdNumber" value={IDNumber} onInput={(e) => setIDNumber(e.target.value)}></input>
+
+
+
+    <br></br>
+    <label for="firstNumber"> firstNumber</label>
+    <input id="firstNumber" value={firstNumber} onInput={(e) => setfirstNumber(e.target.value)}></input>
+    <br></br>
+
+
+    <label for="secondNumber"> secondNumber</label>
+    <input id="secondNumber" value={secondNumber} onInput={(e) => setsecondNumber(e.target.value)}></input>
+
+  </div>
+
+
+
+
+
+}
+
+export default App;
+
+
+
