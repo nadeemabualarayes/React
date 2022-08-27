@@ -1,4 +1,4 @@
-import { useState } from "react";
+/* import { useState } from "react";
 
 class PassProps extends React.Component {
 
@@ -24,3 +24,4 @@ useEffect(()=>{
    )
 }
 
+ */
