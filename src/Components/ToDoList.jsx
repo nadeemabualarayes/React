@@ -25,13 +25,14 @@ const reducer = (state, action) => {
             return [... state , action.item]
 
         case "complete":
-            return state.map((item) => {
+          /*   return state.map((item) => {
                 if (item.id === action.id) {
                     return { ...item, status: "completed" };
                 } else {
                     return item;
                 }
-            });
+            }); */
+            return state.filter((item) =>(item.id !== action.id))
         default:
             return state;
     }
