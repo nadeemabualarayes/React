@@ -22,17 +22,17 @@ const reducer = (state, action) => {
     switch (action.type) {
 
         case "add":
-            return [... state , action.item]
+            return [...state, action.item]
 
         case "complete":
-          /*   return state.map((item) => {
-                if (item.id === action.id) {
-                    return { ...item, status: "completed" };
-                } else {
-                    return item;
-                }
-            }); */
-            return state.filter((item) =>(item.id !== action.id))
+            /*   return state.map((item) => {
+                  if (item.id === action.id) {
+                      return { ...item, status: "completed" };
+                  } else {
+                      return item;
+                  }
+              }); */
+            return state.filter((item) => (item.id !== action.id))
         default:
             return state;
     }
@@ -61,7 +61,7 @@ const ToDoList = () => {
 
 
     return (
-        
+
         <div>
             <label>
                 <input
@@ -88,7 +88,7 @@ const ToDoList = () => {
                 </div>
             ))}
 
-         
+
         </div>
     );
 };
