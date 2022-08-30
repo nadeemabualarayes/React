@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 
 // TODO:: refactor validation
@@ -7,6 +7,11 @@ const MyFirstForm = () => {
     const [inputs, setInputs] = useState({});
     const [validationMsg, setValidationMsg] = useState("");
 
+    const inputElement = useRef();
+
+    const focusInput = () => {
+        inputElement.current.focus();
+    };
 
     const handleChange = (e) => {
         const inputValue = e.target.value;
@@ -25,10 +30,12 @@ const MyFirstForm = () => {
             valid = false;
         } else if (!email || !email.trim()) {
             setValidationMsg("email is required");
+            focusInput();
             valid = false;
         } else if (!email.includes("@")) {
             valid = false;
             setValidationMsg("email is not valid");
+            focusInput();
         } else if (!password.trim()) {
             setValidationMsg("password is required");
             valid = false;
@@ -90,6 +97,7 @@ const MyFirstForm = () => {
                         name="email"
                         value={inputs.email}
                         onInput={handleChange}
+                        ref={inputElement}
                     />
                     <br />
                 </div>
@@ -126,7 +134,7 @@ const MyFirstForm = () => {
                     <br />
                 </div>
 
-                <input type="submit" value="submit" />
+                <input type="submit" value="submit"  />
             </form>
         </div>
     );
