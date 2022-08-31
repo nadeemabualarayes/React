@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import "./App.css";
 import MyFirstForm from "./Components/MyFirstForm";
 import UseMemoExample from "./Components/UseMemoExample";
-
+import NewFetch from "./Components/newFetch";
 const App = () => {
   return (
     <div>
       {/*     <MyFirstForm /> */}
-      <UseMemoExample />
+      {/* <UseMemoExample /> */}
+      <NewFetch/>
     </div>
   );
 };
